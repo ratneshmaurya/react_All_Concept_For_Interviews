@@ -9,10 +9,11 @@
 // remember the updated state value.
 
 // ---------------------------------------------------------------------------
-// EXAMPLE: creating an inner handleclick function inside a component function.
+// EXAMPLE: creating an inner handleClick() function inside a component counter() function.
 function Counter() {
   const [count, setCount] = useState(0)
 
+  // inner function, jo count variable ko access karta hai, and uske upar kaam karta hai, is called closure.
   function handleClick() {
     console.log("count is:", count)
     setCount(count + 1)
