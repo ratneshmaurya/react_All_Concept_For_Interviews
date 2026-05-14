@@ -44,7 +44,7 @@ useEffect(() => {
 }, [count])
 
 setInterval(() => {
-  console.log(countRef.current) // now it reads latest value even after it runs anytime in future.
+  console.log(countRef.current) // now it reads latest value even after it runs anytime or manytime in future.
 }, 5000)
 
 // Why works? Because: ref object same rehta
