@@ -50,6 +50,10 @@ count = 0
 
 
 //------------------------ STEP 2 — Button click
+// Here the component outer function is over and completed, only the inner function handleClick is left, 
+// and that function is remembered by React, and whenever we click the button, it will execute that handleClick 
+// function, and that function has closure over count variable, and it remembers the value of count at the time 
+// of its creation, which is 0. 
 
 // Browser runs this function:
 handleClick()
