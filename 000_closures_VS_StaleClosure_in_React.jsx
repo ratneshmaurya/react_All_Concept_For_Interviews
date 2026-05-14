@@ -2,6 +2,12 @@
 // React me closure kya hota?
 // Stale closure kya hota?
 
+
+// Before anything remeber one thing: React me har render pe, poora component function firse chalta hai, 
+// aur uske andar jitne bhi variables and functions hain, wo sab firse create hote hain, but React 
+// internally state value ko remember karta hai, so even if the function is recreated, it will 
+// remember the updated state value.
+
 // ---------------------------------------------------------------------------
 // EXAMPLE: creating an inner handleclick function inside a component function.
 function Counter() {
@@ -22,7 +28,7 @@ function Counter() {
 }
 
 // --------------------STEP 1 — FIRST RENDER
-// React runs this function: Counter()
+// React create this function: Counter()
 
 // Inside function
 const [count, setCount] = useState(0)
@@ -58,7 +64,7 @@ setCount(count + 1)
 // So: setCount(1)
 
 // ----------------- STEP 3 — React re-render, becoz setCount runs hence trigger react-render
-// Now React: poora component function FIRSE chalata hai
+// Now React: poora component function FIRSE recreate hota hai
 // So again this function runs, and new refernce created for this function:
 Counter()
 
@@ -71,6 +77,7 @@ count = 1
 // Ye NEW function ab: count=1, remember karta.
 // OLD function gaya ❌
 // NEW function aaya ✔
+// and react have also the new value as count=1;
 function handleClick() {
   console.log("count is:", count)
   setCount(count + 1)
