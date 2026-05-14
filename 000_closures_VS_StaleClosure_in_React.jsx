@@ -14,6 +14,7 @@ function Counter() {
   const [count, setCount] = useState(0)
 
   // inner function, jo count variable ko access karta hai, and uske upar kaam karta hai, is called closure.
+  // as on returning this inner function, it takes that count value with it and works on that value.
   function handleClick() {
     console.log("count is:", count)
     setCount(count + 1)
