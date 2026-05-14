@@ -3,7 +3,7 @@
 // Stale closure kya hota?
 
 
-// Before anything remeber one thing: React me har render pe, poora component function firse chalta hai, 
+// Before anything remeber one thing: React me har render pe, poora component function firse create hota hai, 
 // aur uske andar jitne bhi variables and functions hain, wo sab firse create hote hain, but React 
 // internally state value ko remember karta hai, so even if the function is recreated, it will 
 // remember the updated state value.
